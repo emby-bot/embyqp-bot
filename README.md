@@ -5,7 +5,7 @@
 ## 快速开始
 
 ```bash
-git clone 你的仓库地址
+git clone https://github.com/emby-bot/emby-tmdb-bot.git
 cd emby-tmdb-bot
 cp .env.example .env
 nano .env
@@ -55,3 +55,10 @@ docker compose up -d --build
 
 - 数据目录是 `./data`
 
+## 更新项目
+
+如果你已经部署过项目，后续更新代码可执行：
+
+```bash
+git pull
+docker compose up -d --build
