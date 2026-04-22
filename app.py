@@ -274,12 +274,6 @@ def _write_user_store_unlocked(store: Dict[str, Any]) -> None:
         finally:
             conn.close()
 
-
-def migrate_json_to_sqlite_if_needed() -> None:
-    init_sqlite_db()
-    if os.path.exists(USERS_FILE) or os.path.exists(REQUESTS_FILE):
-        migrate_json_to_sqlite()
-
 def normalize_emby_base(url: str) -> str:
     url = (url or "").rstrip("/")
     if not url:
@@ -3520,7 +3514,6 @@ if __name__ == "__main__":
     logging.info("Bot 启动中...")
 
     init_sqlite_db()
-    migrate_json_to_sqlite_if_needed()
 
     cleanup_expired_pending_requests()
 
