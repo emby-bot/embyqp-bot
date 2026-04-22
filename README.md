@@ -10,7 +10,6 @@ cd emby-tmdb-bot
 cp .env.example .env
 nano .env
 docker compose up -d --build
-docker compose logs -f --tail=200
 ```
 
 ## 需要填写的配置
