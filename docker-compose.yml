@@ -1,0 +1,13 @@
+services:
+  emby-tmdb-bot:
+    build: .
+    container_name: emby-tmdb-bot
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      TZ: ${TZ:-Asia/Taipei}
+    ports:
+      - "${EMBY_WEBHOOK_PORT:-8787}:${EMBY_WEBHOOK_PORT:-8787}"
+    volumes:
+      - ./data:/app/data
