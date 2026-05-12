@@ -1,0 +1,25 @@
+services:
+  emby-tmdb-bot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        BASE_IMAGE: ${BASE_IMAGE:-m.daocloud.io/docker.io/library/python:3.11-slim}
+    container_name: emby-tmdb-bot
+    restart: always
+    env_file:
+      - .env
+    environment:
+      TZ: Asia/Shanghai
+      # 如果需要代理自行配置,并去掉注释
+      # ALL_PROXY: socks5h://192.168.31.101:7893
+      # HTTP_PROXY: socks5h://192.168.31.101:7893
+      # HTTPS_PROXY: socks5h://192.168.31.101:7893
+      # NO_PROXY: localhost,127.0.0.1
+    ports:
+      - "8787:8787"
+    volumes:
+      - ./app.py:/app/app.py
+      - ./data:/app/data
+      - ./app_private_menu.py:/app/app_private_menu.py
+    command: ["python", "app_private_menu.py"]
