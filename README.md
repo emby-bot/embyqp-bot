@@ -5,3 +5,8 @@
 ## 纯自用，做的很垃圾，后果自负！！！！！！
 ## 纯自用，做的很垃圾，后果自负！！！！！！
 ## 纯自用，做的很垃圾，后果自负！！！！！！
+
+
+git clone https://github.com/emby-bot/embyqp-bot.git
+
+docker compose up -d --build
