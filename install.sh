@@ -30,12 +30,12 @@ echo
 
 read -rp "* Telegram BOT_TOKEN: " BOT_TOKEN
 read -rp "* TMDB_API_KEY: " TMDB_API_KEY
-read -rp "* OWNER_CHAT_ID，填写你的 Telegram 数字 ID: " OWNER_CHAT_ID
-read -rp "* ADMIN_CHAT_IDS，多个管理员用英文逗号分隔: " ADMIN_CHAT_IDS
-read -rp "* EMBY_URL，例如 http://192.168.31.50:8096: " EMBY_URL
+read -rp "* OWNER_CHAT_ID，（Bot 主人 TG ID）: " OWNER_CHAT_ID
+read -rp "* ADMIN_CHAT_IDS，（管理员TG ID，多个管理员用英文逗号分隔）: " ADMIN_CHAT_IDS
+read -rp "* EMBY_URL: " EMBY_URL
 read -rp "* EMBY_API_KEY: " EMBY_API_KEY
-read -rp "TG_CHANNEL_ID，入库通知频道 ID，可留空: " TG_CHANNEL_ID
-read -rp "EMBY_WEBHOOK_SECRET，Webhook 密钥，可留空: " EMBY_WEBHOOK_SECRET
+read -rp "TG_CHANNEL_ID（入库通知频道） ID: " TG_CHANNEL_ID
+read -rp "EMBY_WEBHOOK_SECRET（32位随机字符串）: " EMBY_WEBHOOK_SECRET
 read -rp "宿主机映射端口，默认 8787: " HOST_PORT
 
 HOST_PORT="${HOST_PORT:-8787}"
