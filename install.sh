@@ -154,22 +154,3 @@ echo
 echo "======================================"
 echo "✅ 安装完成"
 echo "======================================"
-echo
-echo "项目目录："
-echo "  ${APP_DIR}"
-echo
-echo "查看容器状态："
-echo "  cd ${APP_DIR} && docker compose ps"
-echo
-echo "查看日志："
-echo "  cd ${APP_DIR} && docker compose logs -f --tail=100"
-echo
-echo "修改配置："
-echo "  nano ${APP_DIR}/.env"
-echo
-echo "修改配置后重启："
-echo "  cd ${APP_DIR} && docker compose up -d"
-echo
-echo "停止："
-echo "  cd ${APP_DIR} && docker compose down"
-echo
